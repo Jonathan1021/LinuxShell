@@ -11,7 +11,7 @@ NUMBER_CONNECTIONS=1
 echo "-----> Number Connections $NUMBER_CONNECTIONS"
 
 
-# Conecction Daniela
+# Conecction 
 CONNECTIONS_NAME[0]=""
 CONNECTIONS_HOST[0]=
 CONNECTIONS_PORT[0]=
