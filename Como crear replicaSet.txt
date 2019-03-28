@@ -1,0 +1,35 @@
+** Ejecutar Scripts para local repl.sh
+** Acceder al Shell de mongo de alg{un puerto}
+
+mongo --port <port> 
+
+** Inicializar replica set
+
+rs.initiate()
+
+** Crear Usuario admin en el nodo primario
+
+use admin
+db.createUser(
+  {
+    user: "<username>",
+    pwd: " <password> ",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+)
+
+** Autenticar Usuario
+
+db.auth( <username>, <password> )
+
+** Asignar el nodo como PRIMARY
+
+rs.isMaster()
+
+** Adicionar nodos Secundarios
+
+rs.add( <host:port> )
+
+** Verificar el estado de la ReplicaSet y ver la adición de miembros/nodos
+
+rs.status()
